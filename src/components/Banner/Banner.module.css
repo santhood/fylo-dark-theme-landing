@@ -1,0 +1,60 @@
+.banner {
+  margin-block-start: 10rem;
+}
+
+.banner_content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.banner_picture {
+  display: block;
+}
+.banner_picture img {
+  width: 100%;
+}
+
+.banner_text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+}
+
+.banner_text h2 {
+  font-family: var(--ff-headings);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.banner_text a {
+  width: max-content;
+  padding-block-end: 0.5rem;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  position: relative;
+  color: var(--clr-accent-100);
+}
+
+.banner_text a::before {
+  content: "";
+  height: 0.125rem;
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  background-color: var(--clr-accent-100);
+}
+
+/* Breakpoints */
+@media (min-width: 1024px) {
+  .banner_content {
+    align-items: center;
+    grid-template-columns: 50% 1fr;
+  }
+
+  .banner_text h2 {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,43 @@
+.features {
+  margin-block-start: 2rem;
+}
+
+.features_div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.features_card {
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.features_card picture {
+  width: max-content;
+  margin-inline: auto;
+  display: block;
+}
+
+.features_card img {
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: scale-down;
+}
+
+.features_card h2 {
+  margin-block-start: 2rem;
+  margin-block-end: 0.72rem;
+  font-family: var(--ff-headings);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Breakpoint */
+@media (min-width: 1024px) {
+  .features {
+    margin-block-start: 0.5rem;
+  }
+}

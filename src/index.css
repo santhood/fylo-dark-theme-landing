@@ -1,0 +1,133 @@
+:root {
+  --clr-primary-100: hsl(217, 28%, 15%); /*intro and email sign up background*/
+  --clr-primary-200: hsl(218, 28%, 13%); /* main background */
+  --clr-primary-300: hsl(216, 53%, 9%); /* footer background */
+  --clr-primary-400: hsl(219, 30%, 18%); /* testimonials background */
+
+  --clr-accent-100: hsl(176, 68%, 64%); /* inside call-to-action gradient */
+  --clr-accent-200: hsl(198, 60%, 50%); /* inside call-to-action gradient */
+  --clr-accent-300: hsl(0, 100%, 63%); /* error */
+  --clr-accent-gradient-100: linear-gradient(
+    90deg,
+    var(--clr-accent-100),
+    var(--clr-accent-200)
+  );
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --ff-body: "Open Sans Variable", sans-serif;
+  --ff-headings: "Raleway Variable", sans-serif;
+}
+
+* {
+  min-width: 0;
+  font: inherit;
+  color: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: var(--ff-body);
+  font-weight: 400;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-200);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+  line-height: 1.5;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  padding: 0;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  color: black;
+}
+
+/* Components class */
+.btn-primary {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 9999px;
+  letter-spacing: 0.025rem;
+  font-family: var(--ff-headings);
+  font-weight: 700;
+  display: block;
+  position: relative;
+  z-index: 10;
+  background-color: var(--clr-accent-100);
+}
+
+.btn-primary::before {
+  content: "";
+  border-radius: inherit;
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: var(--clr-accent-gradient-100);
+  transition: opacity 200ms;
+}
+
+.btn-primary:hover::before {
+  opacity: 0;
+}
+
+.btn-primary--small {
+  width: 280px;
+}
+
+/* Utils class */
+.container {
+  max-width: 1280px;
+  padding-inline: 1.25rem;
+  margin-inline: auto;
+}
+
+.paragraph {
+  opacity: 0.8;
+}

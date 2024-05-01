@@ -1,0 +1,53 @@
+.header {
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.header_nav {
+  padding-block: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 1.5rem;
+}
+
+.header_ul {
+  display: flex;
+  align-items: center;
+  column-gap: 1.2rem;
+}
+
+.header_ul li {
+  font-size: 0.875rem;
+  color: #dddddd;
+  transition: color 200ms;
+}
+
+.header_ul li:hover {
+  text-decoration: underline;
+  color: #ffff;
+}
+
+/* Logo Component */
+.main_logo {
+  width: max-content;
+  display: block;
+}
+
+.main_logo img {
+  width: 5.5rem;
+}
+
+/* Breakpoints */
+@media (min-width: 1024px) {
+  .header_nav {
+    padding-block: 3rem;
+  }
+
+  .header_ul {
+    column-gap: 3rem;
+    font-size: 1rem;
+  }
+}

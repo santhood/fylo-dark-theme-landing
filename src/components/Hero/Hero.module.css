@@ -1,0 +1,70 @@
+.hero {
+  padding-block: 6.5rem;
+  position: relative;
+  z-index: 50;
+  background-color: var(--clr-primary-100);
+}
+
+.hero_div {
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.hero_text {
+  margin-block-start: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero_text h1 {
+  font-family: var(--ff-headings);
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.hero_text p {
+  margin-block-start: 1rem;
+  margin-block-end: 1.75rem;
+}
+
+.wave_image {
+  height: 340px;
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  z-index: -1;
+  background-color: var(--clr-primary-200);
+}
+
+.wave_image img {
+  width: 100%;
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-end: 100%;
+  transform: translateY(5px);
+}
+
+/* Breakpoints */
+@media (min-width: 640px) {
+  .wave_image {
+    height: 180px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero_text h1 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding-block-start: 8rem;
+  }
+
+  .wave_image {
+    height: 0;
+  }
+}
